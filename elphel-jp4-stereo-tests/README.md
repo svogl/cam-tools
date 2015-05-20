@@ -62,7 +62,7 @@ Converted to grayscale yields the following difference image (reference left, JP
 Interestingly, there are still considerable differences between the normal JPEG and JP4versions which I can't explain from exposure or color balance settings,
 will need to check the encoding pipeline.
 
-### Saving space: JPEG set to 75% quality
+### Saving space: reducing JPEG quality
 
 Next, I had a look at the effects of the JPEG encoder on our targets: Up to now we had been using 95% JPEG encoding quality, so I slightly
 lowered it to 75% which should result in little visible artefacts (so the graphics designers say...)
@@ -85,6 +85,12 @@ Originally I thought it is compressing with 100% quality, but setting the compre
 -rw-r--r--@ 1 simon  staff   573938 May 20 14:20 elphelimg_q60.jp46.jpg
 -rw-r--r--@ 1 simon  staff   402342 May 20 14:20 elphelimg_q60.jpeg
 ```
+
+And as expected,artifacts and differences increase:
+
+![Gray level differences at 60% jpeg encoding quality](img/7.gray_level_60perc_quality.png)
+
+
 
 Will need to dig through the FPGA logic to get the hang of this...
 
